@@ -26,7 +26,20 @@ public class Service {
 		return json;
 		
 	}
+
+	public int AccNameCounter(String name) {
+		
+		int counter = 0;
+		
+		for (Account accountCreated : accountsMap.values()) {
+			if (accountCreated.getFirstName() == name) {
+				counter++;
+			}
+		}
+		
+		return counter;
+	}
 	
-	
+
 
 }
